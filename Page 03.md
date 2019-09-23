@@ -3,7 +3,7 @@ Getting started with Hyperscale (Citus)
 
 In order to use the Azure Portal Cloud Shell to connect to the Hyperscale (Citus) server group we will need to create a **storage account**. The storage account allows you to save files associated with the Cloud Shell so you may use them in various Azure portal activities like running scripts, downloading data files and managing Azure resources.
 
-**Create a Cloud Shell**
+## Create a Cloud Shell
  
 1.	On the portal banner click on the **Cloud Shell icon**.
 
@@ -38,13 +38,13 @@ In order to use the Azure Portal Cloud Shell to connect to the Hyperscale (Citus
   
         Note: To paste in the bash console right click and choose paste.
  
-**Getting started with Hyperscale (Citus)**
+## Getting started with Hyperscale (Citus)
 
 The Hyperscale (Citus) on Azure Database for PostgreSQL service uses a firewall at the server-level. By default, the firewall prevents all external applications and tools from connecting to the coordinator node and any databases inside. We must add a rule to open the firewall for a specific IP address range.
 
 On the Overview pane in the upper right you will see the address of the coordinator hostname for the cluster that you will be connecting to.
 
-**Configure a server-level firewall rule**
+## Configure a server-level firewall rule
  
 1.	On the left side navigation of the overview pane under Security click **Networking** 
 
@@ -60,11 +60,11 @@ On the Overview pane in the upper right you will see the address of the coordina
 
 Note: Hyperscale (Citus) server communicates over port 5432. If you are trying to connect from within a corporate network, outbound traffic over port 5432 may not be allowed by your network's firewall. If so, you cannot connect to your Hyperscale (Citus) server unless your IT department opens port 5432.
  
-**Connecting to Hyperscale (Citus) on Azure Database for PostgreSQL**
+## Connecting to Hyperscale (Citus) on Azure Database for PostgreSQL
 
 When you create your Hyperscale (Citus) a default database named citus is created. To connect to your database server, you need a connection string and the admin password. Initial connections may take up to 2 minutes. If for any reason your shell times out and you restart it you will need to perform the curl -s https://ifconfig.co command again and ensure the firewall is updated with the new IP address.
 
-**Connect to the database using Psql**
+## Connect to the database using Psql
  
 1.	Click the **Maximize "square"** in the upper right of the Cloud Shell click to make it full screen.
 
@@ -74,7 +74,7 @@ When you create your Hyperscale (Citus) a default database named citus is create
 
        psql "host=citus-lab-3dxbsri5xtgrk-c.postgres.database.azure.com port=5432 dbname=citus user=citus password=Password1! sslmode=require"
        
-    ![](Images/17.png) 
+    ![](Images/18.png) 
 
 **Create and scale out tables**
 
