@@ -14,7 +14,9 @@ For each query, the **coordinator** either routes it to a single worker node, or
 
 ![](Images/Citus-Distributed-Aggregate.png)
 
+
 First we need to log into the Azure portal with the provided credentials.
+
 **Sign in to the Azure portal**
  
 1.	If you are already logged into the Azure portal skip to the next page. Click **Next** on the bottom right of this window 
