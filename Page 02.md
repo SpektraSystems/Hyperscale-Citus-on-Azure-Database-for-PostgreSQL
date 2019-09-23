@@ -9,26 +9,23 @@ Follow these steps to understand the process of creating a PostgreSQL Hyperscale
  
 1.	Click **+ Create a resource** in the upper left-hand corner of the Azure portal.
  
-2.	Under Azure Marketplace select **Databases** from the New page, and select Azure Database for PostgreSQL from the Databases page.
+2.	Under Azure Marketplace select **Databases** from the New page, and select **Azure Database for PostgreSQL** from the Databases page.
  
 3.	On the deployment option page, click the **Create** button under Hyperscale (Citus) on Azure Database for PostgreSQL 
  
 4.	Fill out the new server details form with the following information 
 
-       •	Subscription: will be defaulted to your session's subscription
-       
-       •	Resource group: Click the select existing... drop down and select rg081303
-       
-       •	Server group name: Enter sg081303
-       
-       •	Admin username: currently required to be the value citus
-       
-       •	Password: sp*ondgirkjuo2z4
-       
-and also for Confirm Password
-•	Location: Select westus2
-•	Compute + Storage: Click Configure server group. Leave the settings in that section unchanged and click Save
-Note: When creating Hyperscale (Citus) deployments you are able to horizontally scale the number of worker nodes up to 20 nodes. If you need more than 20 nodes, just create a support ticket and we will enable that for you. You will be able to set up/down (vcores, storage) on all workers as well as the coordinator. RAM is a function of number of cores and type of server (controller or worker).
+  •	Subscription: will be defaulted to your session's subscription
+  •	Resource group: Click the select existing... drop down and select rg081303
+  •	Server group name: Enter sg081303
+  •	Admin username: currently required to be the value citus
+  •	Password: Enter 
+  sp*ondgirkjuo2z4
+  and also for Confirm Password
+  •	Location: Select westus2
+  •	Compute + Storage: Click Configure server group. Leave the settings in that section unchanged and click Save
+
+    Note: When creating Hyperscale (Citus) deployments you are able to horizontally scale the number of worker nodes up to 20 nodes. If you need more than 20 nodes, just create a support ticket and we will enable that for you. You will be able to set up/down (vcores, storage) on all workers as well as the coordinator. RAM is a function of number of cores and type of server (controller or worker).
  
 5.	Click Review + create to see a summary. At this point DO NOT click Create as we have already created it for you to save time 
 Note: If you clicked create, it would take up to 10 minutes to deploy. You would be redirected to a page that monitors the deployment while you wait.
