@@ -14,9 +14,9 @@ First we need to log into the Azure portal with the provided credentials.
 
 7.	You may encounter a popup entitled Stay signed in? with buttons for No and Yes - Choose **No**
  
-8.	You may encounter a popup entitled Welcome to Microsoft Azure with buttons for Start Tour and Maybe Later - Choose Maybe Later 
+8.	You may encounter a popup entitled Welcome to Microsoft Azure with buttons for Start Tour and Maybe Later - Choose **Maybe Later**.
  
-9.	Click Next on the bottom right of this page 
+9.	Click **Next** on the bottom right of this page.
 
 
 **Getting started with Hyperscale (Citus) extension for PostgreSQL**
