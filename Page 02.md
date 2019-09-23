@@ -22,11 +22,11 @@ Follow these steps to understand the process of creating a PostgreSQL Hyperscale
 4.	Fill out the new server details form with the following information 
 
      * Subscription: will be defaulted to your session's subscription     
-     * Resource group: Click the select existing... drop down and select airlift-91699     
-     * Server group name: Enter airlift-91699     
+     * Resource group: Click the select existing... drop down and select **airlift-<suffix> 
+     * Server group name: Enter airlift-<suffix> 
      * Admin username: currently required to be the value citus     
-     * Password: Enter sp*ondgirkjuo2z4 and also for Confirm Password
-     * Location: Select westus2
+     * Password: Enter **Password1!** and also for Confirm Password
+     * Location: Select **westus2**
      * Compute + Storage: Click Configure server group. Leave the settings in that section unchanged and click Save
      
        Note: When creating Hyperscale (Citus) deployments you are able to horizontally scale the number of worker nodes up to 20 nodes. If you need more than 20 nodes, just create a support ticket and we will enable that for you. You will be able to set up/down (vcores, storage) on all workers as well as the coordinator. RAM is a function of number of cores and type of server (controller or worker).
