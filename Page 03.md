@@ -73,6 +73,7 @@ In production workloads the above queries are fast on Hyperscale (Citus) for the
 
  
 **Conclusions**
+
 In this lab you’ve learned how to scale out Postgres horizontally on Microsoft Azure by provisioning a database cluster and configuring the sharding key.
 More specifically you learned how to
 •	Provision a Hyperscale (Citus) server group on Azure Database for PostgreSQL
