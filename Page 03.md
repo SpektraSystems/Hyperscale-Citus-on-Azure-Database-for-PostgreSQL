@@ -1,5 +1,55 @@
-Connecting to Hyperscale (Citus) on Azure Database for PostgreSQL
------------------------------------------------------------------
+Getting started with Hyperscale (Citus)
+---------------------------------------
+
+In order to use the Azure Portal Cloud Shell to connect to the Hyperscale (Citus) server group we will need to create a **storage account**. The storage account allows you to save files associated with the Cloud Shell so you may use them in various Azure portal activities like running scripts, downloading data files and managing Azure resources.
+
+**Create a Cloud Shell**
+ 
+1.	On the portal banner click on the Cloud Shell icon 
+ 
+2.	On the Welcome to Azure Cloud Shell click Bash 
+ 
+3.	On the You have no storage mounted screen click Show advanced settings 
+ 
+4.	Use the default values for subscription and region 
+ 
+5.	Resource Group should be set to Use existing rg081303 
+ 
+6.	For Storage account, select Create new and paste 
+sg081303shell
+in the field
+ 
+7.	For File share, select Create new and enter 
+sg081303shell
+ 
+8.	Click Create Storage 
+Note: This may take up to a minute to create and start the Cloud Shell
+ 
+9.	We will need the client IP address of Cloud Shell to configure the firewall in the next step. At the command prompt enter the following command and press return then copy or note the IP address of your cloud shell 
+curl -s https://ifconfig.co
+Note: To paste in the bash console right click and choose paste.
+ 
+10.	Click Next on the bottom right of this page 
+
+**Getting started with Hyperscale (Citus)**
+
+The Hyperscale (Citus) on Azure Database for PostgreSQL service uses a firewall at the server-level. By default, the firewall prevents all external applications and tools from connecting to the coordinator node and any databases inside. We must add a rule to open the firewall for a specific IP address range.
+On the Overview pane in the upper right you will see the address of the coordinator hostname for the cluster that you will be connecting to.
+Configure a server-level firewall rule
+ 
+1.	On the left side navigation of the overview pane under Security click Firewall 
+ 
+2.	Enter the IP address from your Cloud Shell in the START IP and END IP boxes 
+ 
+3.	Enter the following into the FIREWALL RULE NAME 
+CloudShell
+ 
+4.	Click Save at the top left of the pane 
+Note: Hyperscale (Citus) server communicates over port 5432. If you are trying to connect from within a corporate network, outbound traffic over port 5432 may not be allowed by your network's firewall. If so, you cannot connect to your Hyperscale (Citus) server unless your IT department opens port 5432.
+ 
+5.	Click Next on the bottom right of this page 
+
+**Connecting to Hyperscale (Citus) on Azure Database for PostgreSQL**
 
 When you create your Hyperscale (Citus) a default database named citus is created. To connect to your database server, you need a connection string and the admin password. Initial connections may take up to 2 minutes. If for any reason your shell times out and you restart it you will need to perform the curl -s https://ifconfig.co command again and ensure the firewall is updated with the new IP address.
 
