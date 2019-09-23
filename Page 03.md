@@ -81,6 +81,7 @@ When you create your Hyperscale (Citus) a default database named citus is create
 **Create and scale out tables**
 
 Once connected to the Hyperscale (Citus) coordinator node using Psql, you can complete some basic tasks.
+
 In this experience, we'll primarily focus on distributed tables and getting familiar with them. The data model we're going to work with is simple: user and event data from GitHub. Events include fork creation, git commits related to an organization, and more. Once you've connected via Psql, let's create our tables.
  
 3.	In the Psql console copy and paste the following to create the tables
