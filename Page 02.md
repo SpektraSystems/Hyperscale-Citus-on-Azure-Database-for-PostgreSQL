@@ -31,7 +31,7 @@ Follow these steps to understand the process of creating a PostgreSQL Hyperscale
      •	Compute + Storage: Click Configure server group. Leave the settings in that section unchanged and click Save
  ```
      
-   ![](Images/1.png)
+   ![](Images/6.png)
 
        Note: When creating Hyperscale (Citus) deployments you are able to horizontally scale the number of worker nodes up to 20 nodes. If you need more than 20 nodes, just create a support ticket and we will enable that for you. You will be able to set up/down (vcores, storage) on all workers as well as the coordinator. RAM is a function of number of cores and type of server (controller or worker).
  
