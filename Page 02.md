@@ -18,15 +18,10 @@ Follow these steps to understand the process of creating a PostgreSQL Hyperscale
 ```
      •	Subscription: will be defaulted to your session's subscription
      •	Resource group: Click the select existing... drop down and select airlift-91699
-
      •	Server group name: Enter airlift-91699
-
      •	Admin username: currently required to be the value citus
-
      •	Password: Enter sp*ondgirkjuo2z4 and also for Confirm Password
-
      •	Location: Select westus2
-
      •	Compute + Storage: Click Configure server group. Leave the settings in that section unchanged and click Save
  ```
      
