@@ -27,30 +27,38 @@ In order to use the Azure Portal Cloud Shell to connect to the Hyperscale (Citus
  
 8.	Click **Create Storage**
 
-![](Images/12.png)
+![](Images/13.png)
 
        Note: This may take up to a minute to create and start the Cloud Shell
  
-9.	We will need the client IP address of Cloud Shell to configure the firewall in the next step. At the command prompt enter the following command and press return then copy or note the IP address of your cloud shell 
-curl -s https://ifconfig.co
-Note: To paste in the bash console right click and choose paste.
+9.	We will need the **client IP** address of Cloud Shell to configure the firewall in the next step. At the command prompt enter the following command and press return then copy or note the IP address of your cloud shell 
+  * curl -s https://ifconfig.co
+  
+  ![](Images/14.png)
+  
+        Note: To paste in the bash console right click and choose paste.
  
-10.	Click Next on the bottom right of this page 
-
 **Getting started with Hyperscale (Citus)**
 
 The Hyperscale (Citus) on Azure Database for PostgreSQL service uses a firewall at the server-level. By default, the firewall prevents all external applications and tools from connecting to the coordinator node and any databases inside. We must add a rule to open the firewall for a specific IP address range.
+
 On the Overview pane in the upper right you will see the address of the coordinator hostname for the cluster that you will be connecting to.
-Configure a server-level firewall rule
+
+**Configure a server-level firewall rule**
  
-1.	On the left side navigation of the overview pane under Security click Firewall 
+1.	On the left side navigation of the overview pane under Security click **Networking** 
+
+    ![](Images/14.png)
  
 2.	Enter the IP address from your Cloud Shell in the START IP and END IP boxes 
- 
-3.	Enter the following into the FIREWALL RULE NAME 
-CloudShell
+
+3.	Enter the following into the FIREWALL RULE NAME: **CloudShell**
  
 4.	Click Save at the top left of the pane 
+
+    ![](Images/15.png)
+ 
+
 Note: Hyperscale (Citus) server communicates over port 5432. If you are trying to connect from within a corporate network, outbound traffic over port 5432 may not be allowed by your network's firewall. If so, you cannot connect to your Hyperscale (Citus) server unless your IT department opens port 5432.
  
 5.	Click Next on the bottom right of this page 
