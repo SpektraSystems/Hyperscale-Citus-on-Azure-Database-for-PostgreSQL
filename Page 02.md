@@ -16,10 +16,13 @@ Follow these steps to understand the process of creating a PostgreSQL Hyperscale
 4.	Fill out the new server details form with the following information 
 
        •	Subscription: will be defaulted to your session's subscription
+       
        •	Resource group: Click the select existing... drop down and select rg081303
-       •	Server group name: Enter 
-       sg081303
+       
+       •	Server group name: Enter sg081303
+       
        •	Admin username: currently required to be the value citus
+       
        •	Password: sp*ondgirkjuo2z4
        
 and also for Confirm Password
