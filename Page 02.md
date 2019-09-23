@@ -19,9 +19,7 @@ Follow these steps to understand the process of creating a PostgreSQL Hyperscale
   •	Resource group: Click the select existing... drop down and select rg081303
   •	Server group name: Enter sg081303
   •	Admin username: currently required to be the value citus
-  •	Password: Enter 
-  sp*ondgirkjuo2z4
-  and also for Confirm Password
+  •	Password: Enter sp*ondgirkjuo2z4 and also for Confirm Password
   •	Location: Select westus2
   •	Compute + Storage: Click Configure server group. Leave the settings in that section unchanged and click Save
 
