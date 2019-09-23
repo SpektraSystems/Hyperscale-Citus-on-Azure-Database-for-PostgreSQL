@@ -6,4 +6,5 @@ Azure Database for PostgreSQL is a managed service that you use to run, manage, 
 ![](Images/Citus-Distributed-Aggregate.png)
 
 **Overview Hyperscale (Citus)**
+
 The Hyperscale (Citus) on Azure Database for PostgreSQL is worry-free Postgres that is built to scale out. It distributes (shards), data and queries in a cluster of multiple machines. As an extension (rather than a fork), Hyperscale (Citus) supports new PostgreSQL releases, allowing users to benefit from new features while maintaining compatibility with existing PostgreSQL tools. It solves 2 main problems of performance and scalability with existing workloads. Along with the above, Hyperscale (Citus) also manages the database for you. It provides High Availability, Backups, Monitoring, Alerts and other bells and whistles that are typically part of a PAAS (Platform as a Service) offering.
