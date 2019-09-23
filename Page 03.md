@@ -48,7 +48,7 @@ On the Overview pane in the upper right you will see the address of the coordina
  
 1.	On the left side navigation of the overview pane under Security click **Networking** 
 
-    ![](Images/14.png)
+    ![](Images/15.png)
  
 2.	Enter the IP address from your Cloud Shell in the START IP and END IP boxes 
 
@@ -56,24 +56,28 @@ On the Overview pane in the upper right you will see the address of the coordina
  
 4.	Click Save at the top left of the pane 
 
-    ![](Images/15.png)
- 
+    ![](Images/16.png) 
 
 Note: Hyperscale (Citus) server communicates over port 5432. If you are trying to connect from within a corporate network, outbound traffic over port 5432 may not be allowed by your network's firewall. If so, you cannot connect to your Hyperscale (Citus) server unless your IT department opens port 5432.
  
-5.	Click Next on the bottom right of this page 
-
 **Connecting to Hyperscale (Citus) on Azure Database for PostgreSQL**
 
 When you create your Hyperscale (Citus) a default database named citus is created. To connect to your database server, you need a connection string and the admin password. Initial connections may take up to 2 minutes. If for any reason your shell times out and you restart it you will need to perform the curl -s https://ifconfig.co command again and ensure the firewall is updated with the new IP address.
 
 **Connect to the database using Psql**
  
-1.	Click the Maximize "square" in the upper right of the Cloud Shell click to make it full screen 
+1.	Click the **Maximize "square"** in the upper right of the Cloud Shell click to make it full screen.
+
+    ![](Images/17.png) 
  
-2.	At the bash prompt, connect to your Azure Database for PostgreSQL server with the Psql utility. Initial connections may take up to 2 minutes. Copy and paste the following command and press enter 
-psql "host=sg081303-c.postgres.database.azure.com port=5432 dbname=citus user=citus password='sp*ondgirkjuo2z4' sslmode=require"
-Create and scale out tables
+2.	At the bash prompt, connect to your **Azure Database for PostgreSQL server** with the Psql utility. Initial connections may take up to 2 minutes. Copy and paste the following command and press **enter**. Don't forget to update host name with your PostgreSQL server v2 in which -c is added in suffix.
+
+       psql "host=citus-lab-3dxbsri5xtgrk-c.postgres.database.azure.com port=5432 dbname=citus user=citus password=Password1! sslmode=require"
+       
+    ![](Images/17.png) 
+
+**Create and scale out tables**
+
 Once connected to the Hyperscale (Citus) coordinator node using Psql, you can complete some basic tasks.
 In this experience, we'll primarily focus on distributed tables and getting familiar with them. The data model we're going to work with is simple: user and event data from GitHub. Events include fork creation, git commits related to an organization, and more. Once you've connected via Psql, let's create our tables.
  
