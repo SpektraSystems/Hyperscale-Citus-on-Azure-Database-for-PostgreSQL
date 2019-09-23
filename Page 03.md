@@ -82,5 +82,5 @@ More specifically you learned how to
 •	Create a schema, define the sharding key, and load the data into the server group
 Hyperscale (Citus) on Azure Database for PostgreSQL enables you to distribute your data and your queries across a Postgres database cluster (what we call a ‘server group’), giving your application the performance benefits of all the memory, compute, and disk available on all the nodes in the server group.
 If you would like to test Hyperscal (Citus) in your own subscription please use the following link
-•	Quickstart create Hyperscale (Citus)
+•	[Quickstart create Hyperscale (Citus)](https://docs.microsoft.com/en-us/azure/postgresql/quickstart-create-hyperscale-portal)
 Thank you for your time today and congratulations on finishing this experience.
