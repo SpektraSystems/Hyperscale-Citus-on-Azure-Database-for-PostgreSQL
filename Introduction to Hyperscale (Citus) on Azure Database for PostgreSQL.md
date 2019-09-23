@@ -5,12 +5,12 @@ Azure Database for PostgreSQL is a managed service that you use to run, manage, 
 
 **Overview Hyperscale (Citus)**
 
-The Hyperscale (Citus) on Azure Database for PostgreSQL is worry-free Postgres that is built to scale out. It distributes (shards), data and queries in a cluster of multiple machines. As an extension (rather than a fork), Hyperscale (Citus) supports new PostgreSQL releases, allowing users to benefit from new features while maintaining compatibility with existing PostgreSQL tools. It solves 2 main problems of performance and scalability with existing workloads. Along with the above, Hyperscale (Citus) also manages the database for you. It provides High Availability, Backups, Monitoring, Alerts and other bells and whistles that are typically part of a PAAS (Platform as a Service) offering.
+The Hyperscale (Citus) on Azure Database for PostgreSQL is worry-free Postgres that is built to scale out. It distributes (shards), data and queries in a cluster of multiple machines. As an extension (rather than a fork), **Hyperscale (Citus)** supports new PostgreSQL releases, allowing users to benefit from new features while maintaining compatibility with existing PostgreSQL tools. It solves 2 main problems of performance and scalability with existing workloads. Along with the above, Hyperscale (Citus) also manages the database for you. It provides High Availability, Backups, Monitoring, Alerts and other bells and whistles that are typically part of a PAAS (Platform as a Service) offering.
 
 **Hyperscale (Citus) Architecture:**
 
 Every cluster has one special node called the coordinator (the others are known as workers). Applications send their queries to the coordinator node which relays it to the relevant workers and accumulates the results.
-For each query, the coordinator either routes it to a single worker node, or parallelizes it across several depending on whether the required data lives on a single node or multiple. Below are some scenarios on how Hyperscale (Citus) distributes your queries across multiple workers.
+For each query, the **coordinator** either routes it to a single worker node, or parallelizes it across several depending on whether the required data lives on a single node or multiple. Below are some scenarios on how Hyperscale (Citus) distributes your queries across multiple workers.
 
 ![](Images/Citus-Distributed-Aggregate.png)
 
