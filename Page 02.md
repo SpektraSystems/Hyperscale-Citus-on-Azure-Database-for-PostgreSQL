@@ -14,9 +14,9 @@ Follow these steps to understand the process of creating a PostgreSQL Hyperscale
 3.	On the deployment option page, click the **Create** button under Hyperscale (Citus) on Azure Database for PostgreSQL 
  
 4.	Fill out the new server details form with the following information 
-``
-     •	Subscription: will be defaulted to your session's subscription
 
+```
+     •	Subscription: will be defaulted to your session's subscription
      •	Resource group: Click the select existing... drop down and select airlift-91699
 
      •	Server group name: Enter airlift-91699
@@ -27,11 +27,10 @@ Follow these steps to understand the process of creating a PostgreSQL Hyperscale
 
      •	Location: Select westus2
 
-     •	Compute + Storage: Click Configure server group. Leave the settings in that section unchanged and click Save``
+     •	Compute + Storage: Click Configure server group. Leave the settings in that section unchanged and click Save
+ ```
      
-     
-
-    Note: When creating Hyperscale (Citus) deployments you are able to horizontally scale the number of worker nodes up to 20 nodes. If you need more than 20 nodes, just create a support ticket and we will enable that for you. You will be able to set up/down (vcores, storage) on all workers as well as the coordinator. RAM is a function of number of cores and type of server (controller or worker).
+      Note: When creating Hyperscale (Citus) deployments you are able to horizontally scale the number of worker nodes up to 20 nodes. If you need more than 20 nodes, just create a support ticket and we will enable that for you. You will be able to set up/down (vcores, storage) on all workers as well as the coordinator. RAM is a function of number of cores and type of server (controller or worker).
  
 5.	Click **Review + create** to see a summary. At this point **DO NOT click Create** as we have already created it for you to save time 
 
