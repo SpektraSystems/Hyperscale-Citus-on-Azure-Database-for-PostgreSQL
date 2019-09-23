@@ -2,9 +2,9 @@ Introduction to Hyperscale (Citus) on Azure Database for PostgreSQL
 -------------------------------------------------------------------
 
 First we need to log into the Azure portal with the provided credentials.
-Sign in to the Azure portal
+**Sign in to the Azure portal**
  
-1.	If you are already logged into the Azure portal skip to the next page. Click Next on the bottom right of this window 
+1.	If you are already logged into the Azure portal skip to the next page. Click **Next** on the bottom right of this window 
  
 2.	In the browser navigate to 
 https://portal.azure.com
