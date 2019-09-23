@@ -7,11 +7,11 @@ These instructions will instruct you on how to create a Hyperscale (Citus) serve
 
 Follow these steps to understand the process of creating a PostgreSQL Hyperscale (Citus) server group using the Azure portal.
  
-1.	Click + Create a resource in the upper left-hand corner of the Azure portal 
+1.	Click **+ Create a resource** in the upper left-hand corner of the Azure portal.
  
-2.	Under Azure Marketplace select Databases from the New page, and select Azure Database for PostgreSQL from the Databases page 
+2.	Under Azure Marketplace select **Databases** from the New page, and select Azure Database for PostgreSQL from the Databases page.
  
-3.	On the deployment option page, click the Create button under Hyperscale (Citus) on Azure Database for PostgreSQL 
+3.	On the deployment option page, click the **Create** button under Hyperscale (Citus) on Azure Database for PostgreSQL 
  
 4.	Fill out the new server details form with the following information 
 •	Subscription: will be defaulted to your session's subscription
