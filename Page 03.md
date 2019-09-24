@@ -73,10 +73,10 @@ When you create your Hyperscale (Citus) a default database named citus is create
     ![](Images/17.png) 
  
 2.	At the bash prompt, connect to your **Azure Database for PostgreSQL server** with the Psql utility. Initial connections may take up to 2 minutes. Copy and paste the following command and press **enter**. Don't forget to update host name with your PostgreSQL server v2 in which -c is added in suffix.
-
+```
        psql "host=citus-lab-3dxbsri5xtgrk-c.postgres.database.azure.com port=5432 dbname=citus user=citus password=Password1! sslmode=require"
-       
-    ![](Images/18.png) 
+  ```  
+   ![](Images/18.png) 
 
 **Create and scale out tables**
 
