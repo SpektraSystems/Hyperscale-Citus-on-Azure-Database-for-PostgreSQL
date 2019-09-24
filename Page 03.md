@@ -32,9 +32,10 @@ In order to use the Azure Portal Cloud Shell to connect to the Hyperscale (Citus
        Note: This may take up to a minute to create and start the Cloud Shell
  
 9.	We will need the **client IP** address of Cloud Shell to configure the firewall in the next step. At the command prompt enter the following command and press return then copy or note the IP address of your cloud shell 
-  * curl -s https://ifconfig.co
+
+       * curl -s https://ifconfig.co
   
-  ![](Images/14.png)
+      ![](Images/14.png)
   
         Note: To paste in the bash console right click and choose paste.
  
@@ -128,17 +129,20 @@ We're ready to load data. The following commands will "shell" out to the Bash Cl
 
 6.	In the Psql console copy and paste the following to download the data files
 
+```
        \! curl -O https://examples.citusdata.com/users.csv 
        \! curl -O https://examples.citusdata.com/events.csv
-       
-      ![](Images/24.png)
+ ```      
+    
+   ![](Images/24.png)
 
 7.	In the Psql console copy and paste the following to load the data files
-
+```
        \copy github_events from 'events.csv' WITH CSV 
        \copy github_users from 'users.csv' WITH CSV
-       
-      ![](Images/25.png)
+ ```      
+     
+   ![](Images/25.png)
 
 For heavy production workloads where the COPY command is faster in Hyperscale (Citus) than single node postgres because COPY fans out and runs in parallel across the worker nodes.
 Run queries
