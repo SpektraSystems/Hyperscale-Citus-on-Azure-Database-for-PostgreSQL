@@ -85,9 +85,12 @@ Once connected to the Hyperscale (Citus) coordinator node using Psql, you can co
 In this experience, we'll primarily focus on distributed tables and getting familiar with them. The data model we're going to work with is simple: user and event data from GitHub. Events include fork creation, git commits related to an organization, and more. Once you've connected via Psql, let's create our tables.
  
 3.	In the Psql console copy and paste the following to create the tables
-
+`
 CREATE TABLE github_events ( event_id bigint, event_type text, event_public boolean, repo_id bigint, payload jsonb, repo jsonb, user_id bigint, org jsonb, created_at timestamp ); 
+
 CREATE TABLE github_users ( user_id bigint, url text, login text, avatar_url text, gravatar_id text, display_login text );
+
+`
 
 The payload field of github_events has a JSONB datatype. JSONB is the JSON datatype in binary form in Postgres. The datatype makes it easy to store a flexible schema in a single column. Postgres can create a GIN index on this type, which will index every key and value within it. With an index, it becomes fast and easy to query the payload with various conditions. Let's go ahead and create a couple of indexes before we load our data.
 
