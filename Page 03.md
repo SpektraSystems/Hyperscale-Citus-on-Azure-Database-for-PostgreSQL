@@ -9,29 +9,33 @@ In order to use the Azure Portal Cloud Shell to connect to the Hyperscale (Citus
 
     ![](Images/10.png)
  
-2.	On the Welcome to Azure Cloud Shell click **Bash**.
+2.	If you have already configured the **Cloud Shell**, then after connecting to the cloud shell terminal select **Bash** from upper right corner of terminal window.
+
+    ![](Images/20.png)
+
+3. On the Welcome to Azure Cloud Shell click **Bash**.
 
     ![](Images/11.png)
  
-3.	On the You have no storage mounted screen click **Show advanced settings**.
+4.	On the You have no storage mounted screen click **Show advanced settings**.
 
     ![](Images/12.png)
  
-4.	Use the default values for **subscription** and **region**.
+5.	Use the default values for **subscription** and **region**.
 
-5.	Resource Group should be set to Use existing **airlift-suffix**.
+6.	Resource Group should be set to Use existing **airlift-suffix**.
  
-6.	For Storage account, select Create new and paste **shell(suffix)** in the field.
+7.	For Storage account, select Create new and paste **shell(suffix)** in the field.
  
-7.	For File share, select Create new and enter **shell(suffix)**.
+8.	For File share, select Create new and enter **shell(suffix)**.
  
-8.	Click **Create Storage**
+9.	Click **Create Storage**
 
 ![](Images/13.png)
 
        Note: This may take up to a minute to create and start the Cloud Shell
  
-9.	We will need the **client IP** address of Cloud Shell to configure the firewall in the next step. At the command prompt enter the following command and press return then copy or note the IP address of your cloud shell 
+10.	We will need the **client IP** address of Cloud Shell to configure the firewall in the next step. At the command prompt enter the following command and press return then copy or note the IP address of your cloud shell 
 
        * curl -s https://ifconfig.co
   
