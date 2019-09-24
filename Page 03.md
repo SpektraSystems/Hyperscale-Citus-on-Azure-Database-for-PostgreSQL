@@ -154,20 +154,22 @@ This simple query was refactored based on the shard key user_id you created earl
 Within the JSONB payload column there's a good bit of data, but it varies based on event type. PushEvent events contain a size that includes the number of distinct commits for the push. We can use it to find the total number of commits per hour.
 
 9.	In the Psql console copy and paste the following to see the number of commits by hour
-
+```
        SELECT date_trunc('hour', created_at) AS hour, sum((payload->>'distinct_size')::int) AS num_commits FROM github_events WHERE event_type = 'PushEvent' GROUP BY hour ORDER BY hour;
-       
-      ![](Images/27.png)
+```
+
+   ![](Images/27.png)
 
 Note: If you are stuck in the results view, type q and press Enter to quit view mode
 
 So far the queries have involved the github_events exclusively, but we can combine this information with github_users. Since we sharded both users and events on the same identifier (user_id), the rows of both tables with matching user IDs will be co-located on the same database nodes and can easily be joined. If we join our query on user_id, the Hyperscale (Citus) controller will push the join execution down into shards for execution in parallel on worker nodes.
 
 10.	In the Psql console copy and paste the following to find the users who created the greatest number of repositories.
-
+```
         SELECT login, count(*) FROM github_events ge JOIN github_users gu ON ge.user_id = gu.user_id WHERE event_type = 'CreateEvent' AND payload @> '{"ref_type": "repository"}' GROUP BY login ORDER BY count(*) DESC LIMIT 20;
-        
-       ![](Images/28.png)
+  ```      
+     
+   ![](Images/28.png)
 
 In production workloads the above queries are fast on Hyperscale (Citus) for the following reasons
 
